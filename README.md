@@ -7,5 +7,5 @@ All the projects under this repository have both frontend and backend
 step1. Go to the backend folder install dependent packages. 
         npm install
 
-step. Go to the frontend folder install dependent packages.
+step2. Go to the frontend folder install dependent packages.
         npm install
