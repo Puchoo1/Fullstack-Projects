@@ -12,7 +12,7 @@ const SECRET_KEY = process.env.SECRET_KEY || 'secret';
 app.use(express.json());
 app.use(
   cors({
-    origin: 'http://localhost:5173', // Allow your frontend's origin
+    origin: '*', // Allow your frontend's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
   })
@@ -20,7 +20,7 @@ app.use(
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb://127.0.0.1:27017/authDB', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://admin:rahul123@authentication.2nyjs.mongodb.net/authDB', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
